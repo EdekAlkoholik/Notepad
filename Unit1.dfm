@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 1131
+  Top = 194
+  Width = 745
+  Height = 675
+  Caption = 'Notatniczek'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Tresc: TMemo
+    Left = 0
+    Top = 0
+    Width = 729
+    Height = 616
+    Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 0
+    OnKeyDown = TrescKeyDown
+  end
+  object MainMenu1: TMainMenu
+    Left = 680
+    Top = 16
+    object Plik1: TMenuItem
+      Caption = '&Plik'
+      object Nowy1: TMenuItem
+        Caption = '&Nowy'
+        OnClick = Nowy1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Otworz1: TMenuItem
+        Caption = '&Otworz'
+        OnClick = Otworz1Click
+      end
+      object Zapisz1: TMenuItem
+        Caption = '&Zapisz    Ctrl+S'
+        OnClick = Zapisz1Click
+      end
+      object Zapiszjako1: TMenuItem
+        Caption = 'Zapisz &jako'
+        OnClick = Zapiszjako1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Zakocz1: TMenuItem
+        Caption = 'Za&ko'#324'cz'
+        OnClick = Zakocz1Click
+      end
+    end
+    object Edycja1: TMenuItem
+      Caption = '&Edycja'
+      object Wytnij1: TMenuItem
+        Caption = 'Wytnij    Ctrl+X'
+        OnClick = Wytnij1Click
+      end
+      object WklejCtrlC1: TMenuItem
+        Caption = 'Kopiuj   Ctrl+C'
+        OnClick = WklejCtrlC1Click
+      end
+      object WklejCtrlV1: TMenuItem
+        Caption = 'Wklej    Ctrl+V'
+        OnClick = WklejCtrlV1Click
+      end
+    end
+    object Format1: TMenuItem
+      Caption = '&Format'
+      object Zawijaniewierszy1: TMenuItem
+        Caption = 'Zawijanie wierszy'
+        Checked = True
+        OnClick = Zawijaniewierszy1Click
+      end
+      object Trzcionka1: TMenuItem
+        Caption = '&Trzcionka'
+        OnClick = Trzcionka1Click
+      end
+    end
+    object Pomoc2: TMenuItem
+      Caption = '&Pomoc'
+      object Informacje1: TMenuItem
+        Caption = '&Informacje'
+        object Oprogramie1: TMenuItem
+          Caption = '&O programie'
+          OnClick = Oprogramie1Click
+        end
+        object Blog1: TMenuItem
+          Caption = '&Blog'
+          OnClick = Blog1Click
+        end
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'pliki tekstowe(txt)|*.txt|wszystkie pliki|*.*'
+    Left = 640
+    Top = 16
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Plik tekstowy(txt)|*.txt|Dowolny plik|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 600
+    Top = 16
+  end
+  object FontDialog1: TFontDialog
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 560
+    Top = 16
+  end
+end
